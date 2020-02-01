@@ -56,7 +56,7 @@
             this.tTela.Location = new System.Drawing.Point(12, 12);
             this.tTela.Name = "tTela";
             this.tTela.ReadOnly = true;
-            this.tTela.Size = new System.Drawing.Size(190, 20);
+            this.tTela.Size = new System.Drawing.Size(139, 20);
             this.tTela.TabIndex = 0;
             this.tTela.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -194,7 +194,7 @@
             // 
             this.buttonEquals.Location = new System.Drawing.Point(127, 189);
             this.buttonEquals.Name = "buttonEquals";
-            this.buttonEquals.Size = new System.Drawing.Size(75, 23);
+            this.buttonEquals.Size = new System.Drawing.Size(24, 23);
             this.buttonEquals.TabIndex = 14;
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             // 
             this.buttonPlus.Location = new System.Drawing.Point(127, 57);
             this.buttonPlus.Name = "buttonPlus";
-            this.buttonPlus.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlus.Size = new System.Drawing.Size(24, 23);
             this.buttonPlus.TabIndex = 15;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             // 
             this.buttonMinus.Location = new System.Drawing.Point(127, 87);
             this.buttonMinus.Name = "buttonMinus";
-            this.buttonMinus.Size = new System.Drawing.Size(75, 23);
+            this.buttonMinus.Size = new System.Drawing.Size(24, 23);
             this.buttonMinus.TabIndex = 16;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = true;
@@ -224,7 +224,7 @@
             // 
             this.buttonTimes.Location = new System.Drawing.Point(127, 116);
             this.buttonTimes.Name = "buttonTimes";
-            this.buttonTimes.Size = new System.Drawing.Size(75, 23);
+            this.buttonTimes.Size = new System.Drawing.Size(24, 23);
             this.buttonTimes.TabIndex = 17;
             this.buttonTimes.Text = "x";
             this.buttonTimes.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@
             // 
             this.buttonDevided.Location = new System.Drawing.Point(127, 145);
             this.buttonDevided.Name = "buttonDevided";
-            this.buttonDevided.Size = new System.Drawing.Size(75, 23);
+            this.buttonDevided.Size = new System.Drawing.Size(24, 23);
             this.buttonDevided.TabIndex = 18;
             this.buttonDevided.Text = "/";
             this.buttonDevided.UseVisualStyleBackColor = true;
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 263);
+            this.ClientSize = new System.Drawing.Size(165, 225);
             this.Controls.Add(this.buttonDevided);
             this.Controls.Add(this.buttonTimes);
             this.Controls.Add(this.buttonMinus);

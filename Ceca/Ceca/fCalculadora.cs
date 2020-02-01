@@ -117,6 +117,7 @@ namespace Ceca
             tela = "";
             tTela.Text = "";
             operacao = 1;
+            dot = true;
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
@@ -125,6 +126,7 @@ namespace Ceca
             tela = "";
             tTela.Text = "";
             operacao = 2;
+            dot = true;
         }
 
         private void buttonTimes_Click(object sender, EventArgs e)
@@ -133,6 +135,7 @@ namespace Ceca
             tela = "";
             tTela.Text = "";
             operacao = 3;
+            dot = true;
         }
 
         private void buttonDevided_Click(object sender, EventArgs e)
@@ -141,6 +144,7 @@ namespace Ceca
             tela = "";
             tTela.Text = "";
             operacao = 4;
+            dot = true;
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
@@ -159,8 +163,9 @@ namespace Ceca
                     break;
             }
 
-            tela = "" + resultado;
+            tela = resultado.ToString();
             tTela.Text = tela;
+            dot = true;
         }
     }
 }
