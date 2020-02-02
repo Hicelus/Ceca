@@ -14,6 +14,7 @@ namespace Ceca
     {
         public string tela = "";
         public bool dot = true;
+        public bool repeticao = false;
         double valor1;
         double valor2;
         int operacao;
@@ -23,6 +24,8 @@ namespace Ceca
             InitializeComponent();
         }
 
+        //BOTOES NUMERICOS
+        #region Botoes numericos
         private void button1_Click(object sender, EventArgs e)
         {
             tela += "1";
@@ -97,11 +100,15 @@ namespace Ceca
                 dot = false;
             }
         }
+        #endregion
 
+        //OPERACOES
+        #region Operacoes
         private void buttonEraser_Click(object sender, EventArgs e)
         {
             tela = tela.Remove(tela.Length - 1);
             tTela.Text = tela;
+            repeticao = false;
         }
 
         private void buttonClean_Click(object sender, EventArgs e)
@@ -109,63 +116,97 @@ namespace Ceca
             tTela.Text = "";
             tela = "";
             dot = true;
+            repeticao = false;
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tela);
+            valor1 = Double.Parse(tTela.Text);
             tela = "";
-            tTela.Text = "";
             operacao = 1;
             dot = true;
+            repeticao = false;
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tela);
+            valor1 = Double.Parse(tTela.Text);
             tela = "";
-            tTela.Text = "";
             operacao = 2;
             dot = true;
+            repeticao = false;
         }
 
         private void buttonTimes_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tela);
+            valor1 = Double.Parse(tTela.Text);
             tela = "";
-            tTela.Text = "";
             operacao = 3;
             dot = true;
+            repeticao = false;
         }
 
         private void buttonDevided_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tela);
+            valor1 = Double.Parse(tTela.Text);
             tela = "";
-            tTela.Text = "";
             operacao = 4;
             dot = true;
+            repeticao = false;
+        }
+
+        private void rest()
+        {
+            valor1 = Double.Parse(tTela.Text);
+            tela = "";
+            operacao = 4;
+            dot = true;
+            repeticao = false;
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
             double resultado = 0;
-            valor2 = Double.Parse(tela);
+
+            if(tTela.Text == "")
+            {
+                tTela.Text = "1";
+            }
+
+            if (repeticao)
+            {
+                valor1 = Double.Parse(tTela.Text);
+            }
+            else
+            {
+                valor2 = Double.Parse(tTela.Text);
+                repeticao = true;
+            }
             
             switch(operacao){
-                case 1: resultado = valor1 + valor2;
+                case 1:
+                    resultado = valor1 + valor2;
                     break;
-                case 2: resultado = valor1 - valor2;
+                case 2:
+                    resultado = valor1 - valor2;
                     break;
-                case 3: resultado = valor1 * valor2;
+                case 3:
+                    resultado = valor1 * valor2;
                     break;
-                case 4: resultado = valor1 / valor2;
+                case 4:
+                    
+                    resultado = valor1 / valor2;
                     break;
             }
 
-            tela = resultado.ToString();
-            tTela.Text = tela;
+            tTela.Text = resultado.ToString();
+            tela = "";
             dot = true;
+
+            
         }
+        #endregion
+    
+
     }
 }
