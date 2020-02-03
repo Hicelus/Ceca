@@ -56,6 +56,9 @@
             this.bRecordar = new System.Windows.Forms.Button();
             this.rbMemoria1 = new System.Windows.Forms.RadioButton();
             this.bLimpar = new System.Windows.Forms.Button();
+            this.rbMemory2 = new System.Windows.Forms.RadioButton();
+            this.rbMemory3 = new System.Windows.Forms.RadioButton();
+            this.rbMemory4 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // tTela
@@ -315,7 +318,7 @@
             // rbMemoria1
             // 
             this.rbMemoria1.AutoSize = true;
-            this.rbMemoria1.Location = new System.Drawing.Point(12, 84);
+            this.rbMemoria1.Location = new System.Drawing.Point(10, 86);
             this.rbMemoria1.Name = "rbMemoria1";
             this.rbMemoria1.Size = new System.Drawing.Size(14, 13);
             this.rbMemoria1.TabIndex = 26;
@@ -331,11 +334,44 @@
             this.bLimpar.Text = "Limpar";
             this.bLimpar.UseVisualStyleBackColor = true;
             // 
+            // rbMemory2
+            // 
+            this.rbMemory2.AutoSize = true;
+            this.rbMemory2.Location = new System.Drawing.Point(10, 111);
+            this.rbMemory2.Name = "rbMemory2";
+            this.rbMemory2.Size = new System.Drawing.Size(14, 13);
+            this.rbMemory2.TabIndex = 28;
+            this.rbMemory2.TabStop = true;
+            this.rbMemory2.UseVisualStyleBackColor = true;
+            // 
+            // rbMemory3
+            // 
+            this.rbMemory3.AutoSize = true;
+            this.rbMemory3.Location = new System.Drawing.Point(10, 141);
+            this.rbMemory3.Name = "rbMemory3";
+            this.rbMemory3.Size = new System.Drawing.Size(14, 13);
+            this.rbMemory3.TabIndex = 29;
+            this.rbMemory3.TabStop = true;
+            this.rbMemory3.UseVisualStyleBackColor = true;
+            // 
+            // rbMemory4
+            // 
+            this.rbMemory4.AutoSize = true;
+            this.rbMemory4.Location = new System.Drawing.Point(10, 170);
+            this.rbMemory4.Name = "rbMemory4";
+            this.rbMemory4.Size = new System.Drawing.Size(14, 13);
+            this.rbMemory4.TabIndex = 30;
+            this.rbMemory4.TabStop = true;
+            this.rbMemory4.UseVisualStyleBackColor = true;
+            // 
             // fCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 260);
+            this.Controls.Add(this.rbMemory4);
+            this.Controls.Add(this.rbMemory3);
+            this.Controls.Add(this.rbMemory2);
             this.Controls.Add(this.bLimpar);
             this.Controls.Add(this.rbMemoria1);
             this.Controls.Add(this.bRecordar);
@@ -402,5 +438,8 @@
         private System.Windows.Forms.Button bRecordar;
         private System.Windows.Forms.RadioButton rbMemoria1;
         private System.Windows.Forms.Button bLimpar;
+        private System.Windows.Forms.RadioButton rbMemory2;
+        private System.Windows.Forms.RadioButton rbMemory3;
+        private System.Windows.Forms.RadioButton rbMemory4;
     }
 }

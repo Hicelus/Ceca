@@ -15,13 +15,13 @@ namespace Ceca
         public string tela = "";
         public bool dot = true;
         public bool repetition = false;
-        double valor1;
-        double valor2;
+        double value1, value2, result;
         int operation;
 
         public fCalculadora()
         {
             InitializeComponent();
+            this.Text = "Ceca";
         }
 
         //BOTOES NUMERICOS
@@ -121,7 +121,7 @@ namespace Ceca
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tTela.Text);
+            value1 = Double.Parse(tTela.Text);
             tela = "";
             operation = 1;
             dot = true;
@@ -130,7 +130,7 @@ namespace Ceca
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tTela.Text);
+            value1 = Double.Parse(tTela.Text);
             tela = "";
             operation = 2;
             dot = true;
@@ -139,7 +139,7 @@ namespace Ceca
 
         private void buttonTimes_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tTela.Text);
+            value1 = Double.Parse(tTela.Text);
             tela = "";
             operation = 3;
             dot = true;
@@ -148,7 +148,7 @@ namespace Ceca
 
         private void buttonDevided_Click(object sender, EventArgs e)
         {
-            valor1 = Double.Parse(tTela.Text);
+            value1 = Double.Parse(tTela.Text);
             tela = "";
             operation = 4;
             dot = true;
@@ -157,7 +157,7 @@ namespace Ceca
 
         private void rest()
         {
-            valor1 = Double.Parse(tTela.Text);
+            value1 = Double.Parse(tTela.Text);
             tela = "";
             operation = 5;
             dot = true;
@@ -173,17 +173,32 @@ namespace Ceca
 
             if (repetition)
             {
-                valor1 = Double.Parse(tTela.Text);
+                value1 = Double.Parse(tTela.Text);
             }
             else
             {
-                valor2 = Double.Parse(tTela.Text);
+                value2 = Double.Parse(tTela.Text);
                 repetition = true;
             }
 
-            FiveOperations fo = new FiveOperations(valor1, valor2, operation);
-                
-            double result = fo.efetuarCalculo();
+            switch (operation)
+            {
+                case 1:
+                    result = value1 + value2;
+                    break;
+                case 2:
+                    result = value1 - value2;
+                    break;
+                case 3:
+                    result = value1 * value2;
+                    break;
+                case 4:
+                    result = value1 / value2;
+                    break;
+                case 5:
+                    result = value1 % value2;
+                    break;
+            }
 
             tTela.Text = result.ToString();
             tela = "";
