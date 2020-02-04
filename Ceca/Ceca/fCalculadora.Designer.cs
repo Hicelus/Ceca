@@ -318,7 +318,8 @@
             // rbMemoria1
             // 
             this.rbMemoria1.AutoSize = true;
-            this.rbMemoria1.Location = new System.Drawing.Point(10, 86);
+            this.rbMemoria1.Checked = true;
+            this.rbMemoria1.Location = new System.Drawing.Point(10, 84);
             this.rbMemoria1.Name = "rbMemoria1";
             this.rbMemoria1.Size = new System.Drawing.Size(14, 13);
             this.rbMemoria1.TabIndex = 26;
@@ -341,7 +342,6 @@
             this.rbMemory2.Name = "rbMemory2";
             this.rbMemory2.Size = new System.Drawing.Size(14, 13);
             this.rbMemory2.TabIndex = 28;
-            this.rbMemory2.TabStop = true;
             this.rbMemory2.UseVisualStyleBackColor = true;
             // 
             // rbMemory3
@@ -351,7 +351,6 @@
             this.rbMemory3.Name = "rbMemory3";
             this.rbMemory3.Size = new System.Drawing.Size(14, 13);
             this.rbMemory3.TabIndex = 29;
-            this.rbMemory3.TabStop = true;
             this.rbMemory3.UseVisualStyleBackColor = true;
             // 
             // rbMemory4
@@ -361,13 +360,13 @@
             this.rbMemory4.Name = "rbMemory4";
             this.rbMemory4.Size = new System.Drawing.Size(14, 13);
             this.rbMemory4.TabIndex = 30;
-            this.rbMemory4.TabStop = true;
             this.rbMemory4.UseVisualStyleBackColor = true;
             // 
             // fCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(582, 260);
             this.Controls.Add(this.rbMemory4);
             this.Controls.Add(this.rbMemory3);
@@ -402,7 +401,7 @@
             this.Controls.Add(this.tTela);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "fCalculadora";
-            this.Text = "fCalculadora";
+            this.Text = " Calculadora Ceca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

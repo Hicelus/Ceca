@@ -21,8 +21,9 @@ namespace Ceca
         public fCalculadora()
         {
             InitializeComponent();
-            this.Text = "Ceca";
         }
+
+        
 
         //BOTOES NUMERICOS
         #region Botoes numericos
