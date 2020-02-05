@@ -107,9 +107,20 @@ namespace Ceca
         #region Operacoes
         private void buttonEraser_Click(object sender, EventArgs e)
         {
-            tela = tela.Remove(tela.Length - 1);
-            tTela.Text = tela;
-            repetition = false;
+            string a = "";
+
+            if(tela != "")
+            {
+                a = tela.Substring(tela.Length - 1);
+                tela = tela.Remove(tela.Length - 1);
+                tTela.Text = tela;
+                repetition = false;
+            }
+            if (a == ".")
+            {
+                dot = true;
+            }
+            
         }
 
         private void buttonClean_Click(object sender, EventArgs e)
