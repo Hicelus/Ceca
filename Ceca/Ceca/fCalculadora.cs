@@ -167,6 +167,11 @@ namespace Ceca
             repetition = false;
         }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void rest()
         {
             value1 = Double.Parse(tTela.Text);
