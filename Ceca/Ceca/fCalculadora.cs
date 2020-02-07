@@ -172,6 +172,11 @@ namespace Ceca
             Application.Exit();
         }
 
+        private void fCalculadora_Load(object sender, EventArgs e)
+        {
+            lData.Text = DateTime.Now.ToLongDateString();
+        }
+
         private void rest()
         {
             value1 = Double.Parse(tTela.Text);
