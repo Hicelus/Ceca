@@ -177,6 +177,16 @@ namespace Ceca
             lData.Text = DateTime.Now.ToLongDateString();
         }
 
+        private void bMemorize_Click(object sender, EventArgs e)
+        {
+            double a = Double.Parse(tTela.Text);
+
+            if (rbMemoria1.Checked)
+            {
+                tMemoria1.Text = tTela.Text;
+            }
+        }
+
         private void rest()
         {
             value1 = Double.Parse(tTela.Text);

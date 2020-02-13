@@ -334,6 +334,7 @@
             this.bMemorize.TabIndex = 24;
             this.bMemorize.Text = "Memorize";
             this.bMemorize.UseVisualStyleBackColor = false;
+            this.bMemorize.Click += new System.EventHandler(this.bMemorize_Click);
             // 
             // bRecovery
             // 
