@@ -26,7 +26,7 @@ namespace Ceca
         
 
         //BOTOES NUMERICOS
-        #region Botoes numericos
+        #region Numbers
         private void button1_Click(object sender, EventArgs e)
         {
             tela += "1";
@@ -104,7 +104,7 @@ namespace Ceca
         #endregion
 
         //OPERACOES
-        #region Operacoes
+        #region Operations
         private void buttonEraser_Click(object sender, EventArgs e)
         {
             string a = "";
@@ -177,16 +177,6 @@ namespace Ceca
             lData.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void bMemorize_Click(object sender, EventArgs e)
-        {
-            double a = Double.Parse(tTela.Text);
-
-            if (rbMemoria1.Checked)
-            {
-                tMemoria1.Text = tTela.Text;
-            }
-        }
-
         private void rest()
         {
             value1 = Double.Parse(tTela.Text);
@@ -195,6 +185,8 @@ namespace Ceca
             dot = true;
             repetition = false;
         }
+
+        
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
@@ -238,8 +230,63 @@ namespace Ceca
 
             
         }
-        #endregion
-    
 
+        
+        #endregion
+
+        //MEMÓRIA
+        #region Memory
+        private void bMemorize_Click(object sender, EventArgs e)
+        {
+            if (rbMemory1.Checked)
+            {
+                tMemory1.Text = tTela.Text;
+            }
+            else if (rbMemory2.Checked)
+            {
+                tMemory2.Text = tTela.Text;
+            }
+            else if (rbMemory3.Checked)
+            {
+                tMemory3.Text = tTela.Text;
+            }
+            else if (rbMemory4.Checked)
+            {
+                tMemory4.Text = tTela.Text;
+            }
+        }
+
+        private void bRecovery_Click(object sender, EventArgs e)
+        {
+            if (rbMemory1.Checked)
+            {
+                tTela.Text = tMemory1.Text;
+            }
+            else if (rbMemory2.Checked)
+            {
+                tTela.Text = tMemory2.Text;
+            }
+            else if (rbMemory3.Checked)
+            {
+                tTela.Text = tMemory3.Text;
+            }
+            else if (rbMemory4.Checked)
+            {
+                tTela.Text = tMemory4.Text;
+            }
+        }
+
+        private void bClean_Click(object sender, EventArgs e)
+        {
+            tMemory1.Text = "";
+            tMemory2.Text = "";
+            tMemory3.Text = "";
+            tMemory4.Text = "";
+        }
+
+
+
+
+        #endregion
     }
 }

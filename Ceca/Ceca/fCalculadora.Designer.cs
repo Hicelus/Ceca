@@ -48,13 +48,13 @@
             this.buttonTimes = new System.Windows.Forms.Button();
             this.buttonDevided = new System.Windows.Forms.Button();
             this.lOrientacao = new System.Windows.Forms.Label();
-            this.tMemoria1 = new System.Windows.Forms.TextBox();
-            this.tMemoria2 = new System.Windows.Forms.TextBox();
-            this.tMemoria3 = new System.Windows.Forms.TextBox();
-            this.tMemoria4 = new System.Windows.Forms.TextBox();
+            this.tMemory1 = new System.Windows.Forms.TextBox();
+            this.tMemory2 = new System.Windows.Forms.TextBox();
+            this.tMemory3 = new System.Windows.Forms.TextBox();
+            this.tMemory4 = new System.Windows.Forms.TextBox();
             this.bMemorize = new System.Windows.Forms.Button();
             this.bRecovery = new System.Windows.Forms.Button();
-            this.rbMemoria1 = new System.Windows.Forms.RadioButton();
+            this.rbMemory1 = new System.Windows.Forms.RadioButton();
             this.bClean = new System.Windows.Forms.Button();
             this.rbMemory2 = new System.Windows.Forms.RadioButton();
             this.rbMemory3 = new System.Windows.Forms.RadioButton();
@@ -288,41 +288,41 @@
             this.lOrientacao.TabIndex = 19;
             this.lOrientacao.Text = "Valor";
             // 
-            // tMemoria1
+            // tMemory1
             // 
-            this.tMemoria1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tMemoria1.Enabled = false;
-            this.tMemoria1.Location = new System.Drawing.Point(33, 94);
-            this.tMemoria1.Name = "tMemoria1";
-            this.tMemoria1.Size = new System.Drawing.Size(110, 20);
-            this.tMemoria1.TabIndex = 20;
+            this.tMemory1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tMemory1.Enabled = false;
+            this.tMemory1.Location = new System.Drawing.Point(33, 94);
+            this.tMemory1.Name = "tMemory1";
+            this.tMemory1.Size = new System.Drawing.Size(110, 20);
+            this.tMemory1.TabIndex = 20;
             // 
-            // tMemoria2
+            // tMemory2
             // 
-            this.tMemoria2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tMemoria2.Enabled = false;
-            this.tMemoria2.Location = new System.Drawing.Point(33, 123);
-            this.tMemoria2.Name = "tMemoria2";
-            this.tMemoria2.Size = new System.Drawing.Size(110, 20);
-            this.tMemoria2.TabIndex = 21;
+            this.tMemory2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tMemory2.Enabled = false;
+            this.tMemory2.Location = new System.Drawing.Point(33, 123);
+            this.tMemory2.Name = "tMemory2";
+            this.tMemory2.Size = new System.Drawing.Size(110, 20);
+            this.tMemory2.TabIndex = 21;
             // 
-            // tMemoria3
+            // tMemory3
             // 
-            this.tMemoria3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tMemoria3.Enabled = false;
-            this.tMemoria3.Location = new System.Drawing.Point(33, 153);
-            this.tMemoria3.Name = "tMemoria3";
-            this.tMemoria3.Size = new System.Drawing.Size(110, 20);
-            this.tMemoria3.TabIndex = 22;
+            this.tMemory3.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tMemory3.Enabled = false;
+            this.tMemory3.Location = new System.Drawing.Point(33, 153);
+            this.tMemory3.Name = "tMemory3";
+            this.tMemory3.Size = new System.Drawing.Size(110, 20);
+            this.tMemory3.TabIndex = 22;
             // 
-            // tMemoria4
+            // tMemory4
             // 
-            this.tMemoria4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tMemoria4.Enabled = false;
-            this.tMemoria4.Location = new System.Drawing.Point(33, 182);
-            this.tMemoria4.Name = "tMemoria4";
-            this.tMemoria4.Size = new System.Drawing.Size(110, 20);
-            this.tMemoria4.TabIndex = 23;
+            this.tMemory4.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tMemory4.Enabled = false;
+            this.tMemory4.Location = new System.Drawing.Point(33, 182);
+            this.tMemory4.Name = "tMemory4";
+            this.tMemory4.Size = new System.Drawing.Size(110, 20);
+            this.tMemory4.TabIndex = 23;
             // 
             // bMemorize
             // 
@@ -345,17 +345,18 @@
             this.bRecovery.TabIndex = 25;
             this.bRecovery.Text = "Recovery";
             this.bRecovery.UseVisualStyleBackColor = false;
+            this.bRecovery.Click += new System.EventHandler(this.bRecovery_Click);
             // 
-            // rbMemoria1
+            // rbMemory1
             // 
-            this.rbMemoria1.AutoSize = true;
-            this.rbMemoria1.Checked = true;
-            this.rbMemoria1.Location = new System.Drawing.Point(11, 99);
-            this.rbMemoria1.Name = "rbMemoria1";
-            this.rbMemoria1.Size = new System.Drawing.Size(14, 13);
-            this.rbMemoria1.TabIndex = 26;
-            this.rbMemoria1.TabStop = true;
-            this.rbMemoria1.UseVisualStyleBackColor = true;
+            this.rbMemory1.AutoSize = true;
+            this.rbMemory1.Checked = true;
+            this.rbMemory1.Location = new System.Drawing.Point(11, 99);
+            this.rbMemory1.Name = "rbMemory1";
+            this.rbMemory1.Size = new System.Drawing.Size(14, 13);
+            this.rbMemory1.TabIndex = 26;
+            this.rbMemory1.TabStop = true;
+            this.rbMemory1.UseVisualStyleBackColor = true;
             // 
             // bClean
             // 
@@ -366,6 +367,7 @@
             this.bClean.TabIndex = 27;
             this.bClean.Text = "Clean Memory";
             this.bClean.UseVisualStyleBackColor = false;
+            this.bClean.Click += new System.EventHandler(this.bClean_Click);
             // 
             // rbMemory2
             // 
@@ -421,28 +423,28 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
             this.resetToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -472,13 +474,13 @@
             this.Controls.Add(this.rbMemory3);
             this.Controls.Add(this.rbMemory2);
             this.Controls.Add(this.bClean);
-            this.Controls.Add(this.rbMemoria1);
+            this.Controls.Add(this.rbMemory1);
             this.Controls.Add(this.bRecovery);
             this.Controls.Add(this.bMemorize);
-            this.Controls.Add(this.tMemoria4);
-            this.Controls.Add(this.tMemoria3);
-            this.Controls.Add(this.tMemoria2);
-            this.Controls.Add(this.tMemoria1);
+            this.Controls.Add(this.tMemory4);
+            this.Controls.Add(this.tMemory3);
+            this.Controls.Add(this.tMemory2);
+            this.Controls.Add(this.tMemory1);
             this.Controls.Add(this.lOrientacao);
             this.Controls.Add(this.buttonDevided);
             this.Controls.Add(this.buttonTimes);
@@ -534,13 +536,13 @@
         private System.Windows.Forms.Button buttonTimes;
         private System.Windows.Forms.Button buttonDevided;
         private System.Windows.Forms.Label lOrientacao;
-        private System.Windows.Forms.TextBox tMemoria1;
-        private System.Windows.Forms.TextBox tMemoria2;
-        private System.Windows.Forms.TextBox tMemoria3;
-        private System.Windows.Forms.TextBox tMemoria4;
+        private System.Windows.Forms.TextBox tMemory1;
+        private System.Windows.Forms.TextBox tMemory2;
+        private System.Windows.Forms.TextBox tMemory3;
+        private System.Windows.Forms.TextBox tMemory4;
         private System.Windows.Forms.Button bMemorize;
         private System.Windows.Forms.Button bRecovery;
-        private System.Windows.Forms.RadioButton rbMemoria1;
+        private System.Windows.Forms.RadioButton rbMemory1;
         private System.Windows.Forms.Button bClean;
         private System.Windows.Forms.RadioButton rbMemory2;
         private System.Windows.Forms.RadioButton rbMemory3;
