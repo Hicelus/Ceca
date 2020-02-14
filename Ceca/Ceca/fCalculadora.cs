@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Ceca
 {
@@ -255,7 +256,7 @@ namespace Ceca
                 tMemory4.Text = tTela.Text;
             }
         }
-
+                
         private void bRecovery_Click(object sender, EventArgs e)
         {
             if (rbMemory1.Checked)
@@ -283,10 +284,17 @@ namespace Ceca
             tMemory3.Text = "";
             tMemory4.Text = "";
         }
-
-
-
-
         #endregion
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string save = tTela.Text + "_" + tMemory1.Text + "_" + tMemory2.Text + "_" + tMemory3.Text + "_" + tMemory4.Text;
+
+            StreamWriter file = new StreamWriter(@"C:\Users\Leandro\Desktop\file.txt");
+            file.WriteLine(save );
+            file.Dispose();
+
+        }
+
     }
 }
