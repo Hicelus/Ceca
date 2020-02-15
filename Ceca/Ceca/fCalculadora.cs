@@ -277,6 +277,8 @@ namespace Ceca
             }
         }
 
+        
+
         private void bClean_Click(object sender, EventArgs e)
         {
             tMemory1.Text = "";
@@ -288,12 +290,22 @@ namespace Ceca
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string save = tTela.Text + "_" + tMemory1.Text + "_" + tMemory2.Text + "_" + tMemory3.Text + "_" + tMemory4.Text;
-
-            StreamWriter file = new StreamWriter(@"C:\Users\Leandro\Desktop\file.txt");
-            file.WriteLine(save );
+            StreamWriter file = new StreamWriter(@"file.txt", false, Encoding.Default);
+            file.WriteLine(tTela.Text + ":" + tMemory1 + ":" + tMemory2 +":" + tMemory3 + ":" + tMemory4);
             file.Dispose();
+        }
 
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamReader file = new StreamReader(@"file.txt", Encoding.Default);
+            String memory = file.ReadLine();
+            String[] division = memory.Split(':');
+            tTela.Text = division[0];
+            tMemory1.Text = division[2];
+            tMemory2.Text = division[4];
+            tMemory3.Text = division[6];
+            tMemory4.Text = division[8];
+            file.Dispose();
         }
 
     }
