@@ -290,22 +290,29 @@ namespace Ceca
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter(@"file.txt", false, Encoding.Default);
+            StreamWriter file = new StreamWriter(@"file.dat", false, Encoding.Default);
             file.WriteLine(tTela.Text + ":" + tMemory1 + ":" + tMemory2 +":" + tMemory3 + ":" + tMemory4);
             file.Dispose();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StreamReader file = new StreamReader(@"file.txt", Encoding.Default);
-            String memory = file.ReadLine();
-            String[] division = memory.Split(':');
-            tTela.Text = division[0];
-            tMemory1.Text = division[2];
-            tMemory2.Text = division[4];
-            tMemory3.Text = division[6];
-            tMemory4.Text = division[8];
-            file.Dispose();
+            if (File.Exists("file.dat"))
+            {
+                StreamReader file = new StreamReader(@"file.dat", Encoding.Default);
+                String memory = file.ReadLine();
+                String[] division = memory.Split(':');
+                tTela.Text = division[0];
+                tMemory1.Text = division[2];
+                tMemory2.Text = division[4];
+                tMemory3.Text = division[6];
+                tMemory4.Text = division[8];
+                file.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Sem dados salvos");
+            }
         }
 
     }
