@@ -67,6 +67,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lData = new System.Windows.Forms.Label();
+            this.buttonRest = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Gainsboro;
-            this.button7.Location = new System.Drawing.Point(191, 153);
+            this.button7.Location = new System.Drawing.Point(190, 153);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(24, 23);
             this.button7.TabIndex = 7;
@@ -194,7 +195,7 @@
             // buttonDot
             // 
             this.buttonDot.BackColor = System.Drawing.Color.Gainsboro;
-            this.buttonDot.Location = new System.Drawing.Point(191, 182);
+            this.buttonDot.Location = new System.Drawing.Point(190, 182);
             this.buttonDot.Name = "buttonDot";
             this.buttonDot.Size = new System.Drawing.Size(24, 23);
             this.buttonDot.TabIndex = 11;
@@ -218,7 +219,7 @@
             this.buttonClean.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonClean.Location = new System.Drawing.Point(190, 226);
             this.buttonClean.Name = "buttonClean";
-            this.buttonClean.Size = new System.Drawing.Size(87, 23);
+            this.buttonClean.Size = new System.Drawing.Size(38, 23);
             this.buttonClean.TabIndex = 13;
             this.buttonClean.Text = "C";
             this.buttonClean.UseVisualStyleBackColor = false;
@@ -227,9 +228,9 @@
             // buttonEquals
             // 
             this.buttonEquals.BackColor = System.Drawing.Color.Gainsboro;
-            this.buttonEquals.Location = new System.Drawing.Point(305, 226);
+            this.buttonEquals.Location = new System.Drawing.Point(239, 226);
             this.buttonEquals.Name = "buttonEquals";
-            this.buttonEquals.Size = new System.Drawing.Size(24, 23);
+            this.buttonEquals.Size = new System.Drawing.Size(38, 23);
             this.buttonEquals.TabIndex = 14;
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = false;
@@ -423,7 +424,7 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -431,7 +432,7 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -439,14 +440,14 @@
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
             this.resetToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -465,12 +466,23 @@
             this.lData.TabIndex = 32;
             this.lData.Text = "lorem ipsum";
             // 
+            // buttonRest
+            // 
+            this.buttonRest.Location = new System.Drawing.Point(305, 226);
+            this.buttonRest.Name = "buttonRest";
+            this.buttonRest.Size = new System.Drawing.Size(24, 23);
+            this.buttonRest.TabIndex = 33;
+            this.buttonRest.Text = "R";
+            this.buttonRest.UseVisualStyleBackColor = true;
+            this.buttonRest.Click += new System.EventHandler(this.buttonRest_Click);
+            // 
             // fCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(582, 269);
+            this.Controls.Add(this.buttonRest);
             this.Controls.Add(this.lData);
             this.Controls.Add(this.rbMemory4);
             this.Controls.Add(this.rbMemory3);
@@ -557,5 +569,6 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label lData;
+        private System.Windows.Forms.Button buttonRest;
     }
 }

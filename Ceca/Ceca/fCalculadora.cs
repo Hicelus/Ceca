@@ -178,7 +178,7 @@ namespace Ceca
             lData.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void rest()
+        private void buttonRest_Click(object sender, EventArgs e)
         {
             value1 = Double.Parse(tTela.Text);
             tela = "";
@@ -288,6 +288,7 @@ namespace Ceca
         }
         #endregion
 
+        
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter file = new StreamWriter(@"file.dat", false, Encoding.Default);
